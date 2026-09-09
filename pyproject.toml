@@ -6,7 +6,7 @@ requires-python = ">=3.11"
 dependencies = ["httpx>=0.27"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "ruff>=0.8"]
 
 [build-system]
 requires = ["hatchling"]
@@ -14,3 +14,9 @@ build-backend = "hatchling.build"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
+
+[tool.ruff.lint]
+# Классический style-набор: pycodestyle-ошибки, pyflakes, сортировка импортов.
+# Примечание: BLE001 (широкий except на границе канала) и ASYNC230 (локальное
+# чтение небольших файлов) — осознанные решения SDK, правилами не проверяем.
+select = ["E4", "E7", "E9", "F", "I"]

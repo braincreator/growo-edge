@@ -5,7 +5,6 @@
 на события Авито (однократно).
 """
 import asyncio
-import os
 
 from fastapi import FastAPI, Request
 

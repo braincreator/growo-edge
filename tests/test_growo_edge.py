@@ -1,12 +1,14 @@
 """SDK-тесты: клиенты не ходят в сеть — httpx.MockTransport."""
-import sys, os
+import os
+import sys
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 import httpx
 import pytest
 
-from growo_edge.avito.client import AvitoClient
 from growo_edge.amocrm.client import AmoCrmClient
+from growo_edge.avito.client import AvitoClient
 from growo_edge.channels.webhook import Dedup, extract_text, verify_hmac_sha256
 from growo_edge.growo import GrowoClient
 
@@ -74,7 +76,8 @@ class TestChannelSkeleton:
     def test_dedup(self):
         d = Dedup(2)
         assert not d.seen("a") and d.seen("a")
-        d.seen("b"); d.seen("c")  # вытесняет a
+        d.seen("b")
+        d.seen("c")  # вытесняет a
         assert not d.seen("a")
 
     def test_extract_text(self):
