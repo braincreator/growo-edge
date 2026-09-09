@@ -2,7 +2,6 @@
 
 **Клиентский клей для внедрений [платформы ИИ-сотрудников Growo](https://growoai.ru)**: интеграции amoCRM и Авито, загрузка базы знаний (RAG) и каркас вебхук-каналов — поверх HTTP API платформы.
 
-[![CI](https://github.com/braincreator/growo-edge/actions/workflows/ci.yml/badge.svg)](https://github.com/braincreator/growo-edge/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
